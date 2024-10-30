@@ -1,40 +1,122 @@
+/* General header styles */
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: linear-gradient(90deg, orange, grey);
-}
-.logo {
-    display: flex;
-    align-items: center;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+    background-color: #343a40; /* Dark background color */
+    padding: 10px 20px; /* Padding around the header */
+    max-width: 1280px; /* Maximum width for the header */
+    margin: 0 auto; /* Center the header in the viewport */
 }
 
+/* Logo styling */
 .logo-image {
-    height: 50px; /* Adjust the height as needed */
-    margin-right: 10px; /* Space between logo and text */
+    height: 80px; /* Set logo height to 80px */
+    width: auto; /* Maintain aspect ratio */
 }
 
-
-.nav a {
-    margin-left: 1.5rem;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack lines vertically */
+    cursor: pointer; /* Pointer on hover */
 }
 
-.nav a:hover {
-    color: #f0c14b;
+/* Hamburger lines */
+.line {
+    width: 30px; /* Line width */
+    height: 3px; /* Line height */
+    background-color: white; /* Line color */
+    margin: 4px 0; /* Space between lines */
+    transition: 0.3s; /* Transition for animations */
 }
 
-.contactButton {
-    padding: 0.5rem 1rem;
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+/* Change hamburger lines on active state */
+.line.active {
+    background-color: orange; /* Change color when active */
 }
 
-.contactButton:hover {
-    transform: scale(1.1);
+/* Navigation styles */
+.nav {
+    display: flex; /* Display items in a row */
+    flex-grow: 1; /* Allow nav to take remaining space */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+/* Hide nav items on small screens */
+.nav.active {
+    display: flex; /* Show items when menu is open */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position absolute for dropdown */
+    background-color: #343a40; /* Match background color */
+    top: 60px; /* Position below the header */
+    right: 0; /* Align to the right */
+    width: 100%; /* Full width */
+    padding: 10px 0; /* Padding around menu */
+    z-index: 1000; /* Ensure dropdown is on top */
+}
+
+/* Unordered list styles */
+ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+}
+
+/* List item styles */
+li {
+    margin: 10px 0; /* Space between menu items */
+    position: relative; /* Position relative for dropdown */
+}
+
+/* Anchor link styles */
+a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+    font-size: 20px; /* Increased font size for menu items */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Change color on hover */
+a:hover {
+    color: orange; /* Change text color on hover */
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position absolutely relative to parent */
+    background-color: #343a40; /* Match background color */
+    padding: 10px; /* Padding for dropdown items */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensure dropdown is on top */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown when parent is hovered */
+}
+
+/* Dropdown item styles */
+.dropdown-item {
+    display: block; /* Display dropdown items as blocks */
+    padding: 5px 10px; /* Padding for dropdown items */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+/* Change background on hover for dropdown items */
+.dropdown-item:hover {
+    background-color: orange; /* Change background on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger menu on small screens */
+    }
+
+    .nav {
+        display: none; /* Hide nav by default on small screens */
+    }
 }
