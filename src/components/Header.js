@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import logo from './IMG-20240626-WA0105.jpg'; // Adjusted path to the logo
+import logo from './VETNAM_080843.png'; // Adjusted path to the logo
 
 const Header = () => {
   return (
