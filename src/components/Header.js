@@ -1,10 +1,13 @@
 import React from 'react';
 import './Header.css';
+import logo from './IMG-20240626-WA0105.jpg'; // Adjusted path to the logo
 
 const Header = () => {
   return (
     <header className="d-flex justify-content-between align-items-center p-3 bg-dark text-white">
-      <div className="logo">Vetma Consultants</div>
+      <div className="logo">
+        <img src={logo} alt="Vetma Consultants Logo" className="logo-image" />
+      </div>
       <nav>
         <ul className="d-flex list-unstyled">
           <li className="mx-3"><a href="#home" className="text-white">Home</a></li>
