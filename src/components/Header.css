@@ -5,12 +5,16 @@
     padding: 1rem 2rem;
     background: linear-gradient(90deg, orange, grey);
 }
-
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+    display: flex;
+    align-items: center;
 }
+
+.logo-image {
+    height: 50px; /* Adjust the height as needed */
+    margin-right: 10px; /* Space between logo and text */
+}
+
 
 .nav a {
     margin-left: 1.5rem;
